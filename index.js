@@ -6,12 +6,14 @@ const app = express();
 
 const port = 8883;
 
-// const BattleNetApi = require('../blizzard-battlenet-api');
+const { battleNetHelpers } = require('../blizzard-battlenet-api');
+
+const helpers = battleNetHelpers;
+
+// const BnetApi = new BattleNetApi(clientID, clientSecret);
 
 // const clientID = '123';
 // const clientSecret = '456';
-
-// const BnetApi = new BattleNetApi(clientID, clientSecret);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -25,6 +27,23 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.get('/', (req, res) => {
   res.json({ hello: 'world!' });
+});
+
+app.get('/helpers/getAllRegions', (req, res) => {
+  res.json(helpers.getAllRegions());
+});
+
+app.get('/helpers/getAllRegionIds', (req, res) => {
+  res.json(helpers.getAllRegionIds());
+});
+
+app.get('/helpers/getAllRegionNames', (req, res) => {
+  res.json(helpers.getAllRegionNames());
+});
+
+app.get('/helpers/getRegionNameById/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  res.json(helpers.getRegionNameById(regionId));
 });
 
 // Profile API
