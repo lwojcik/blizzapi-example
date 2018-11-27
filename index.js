@@ -6,9 +6,7 @@ const app = express();
 
 const port = 8883;
 
-const { battleNetHelpers } = require('../blizzard-battlenet-api');
-
-const helpers = battleNetHelpers;
+const { BattleNetUtils } = require('../blizzard-battlenet-api');
 
 // const BnetApi = new BattleNetApi(clientID, clientSecret);
 
@@ -29,21 +27,21 @@ app.get('/', (req, res) => {
   res.json({ hello: 'world!' });
 });
 
-app.get('/helpers/getAllRegions', (req, res) => {
-  res.json(helpers.getAllRegions());
+app.get('/utils/getAllRegions', (req, res) => {
+  res.json(BattleNetUtils.getAllRegions());
 });
 
-app.get('/helpers/getAllRegionIds', (req, res) => {
-  res.json(helpers.getAllRegionIds());
+app.get('/utils/getAllRegionIds', (req, res) => {
+  res.json(BattleNetUtils.getAllRegionIds());
 });
 
-app.get('/helpers/getAllRegionNames', (req, res) => {
-  res.json(helpers.getAllRegionNames());
+app.get('/utils/getAllRegionNames', (req, res) => {
+  res.json(BattleNetUtils.getAllRegionNames());
 });
 
-app.get('/helpers/getRegionNameById/:regionId', (req, res) => {
+app.get('/utils/getRegionNameById/:regionId', (req, res) => {
   const { regionId } = req.params;
-  res.json(helpers.getRegionNameById(regionId));
+  res.json(BattleNetUtils.getRegionNameById(regionId));
 });
 
 // Profile API
