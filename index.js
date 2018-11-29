@@ -41,7 +41,11 @@ app.get('/utils/getAllRegionNames', (req, res) => {
 
 app.get('/utils/getRegionNameById/:regionId', (req, res) => {
   const { regionId } = req.params;
-  res.json(BattleNetUtils.getRegionNameById(regionId));
+  const { paramType } = req.query.paramType || 'number';
+  
+  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
+
+  res.json(BattleNetUtils.getRegionNameById(regionIdParam));
 });
 
 // Profile API
