@@ -48,6 +48,22 @@ app.get('/utils/getRegionNameById/:regionId', (req, res) => {
   res.json(BattleNetUtils.getRegionNameById(regionIdParam));
 });
 
+app.get('/utils/getRegionIdByName/:regionName', (req, res) => {
+  const { regionName } = req.params;
+  res.json(BattleNetUtils.getRegionIdByName(regionName));
+});
+
+app.get('/utils/validateRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  res.json(BattleNetUtils.validateRegionId(regionId));
+});
+
+app.get('/utils/validateRegionName/:regionName', (req, res) => {
+  const { regionName } = req.params;
+  res.json(BattleNetUtils.validateRegionName(regionName));
+});
+
+
 // Profile API
 
 // app.get('/server/:server/api/profile/static/profile/:region', (req, res) => {
