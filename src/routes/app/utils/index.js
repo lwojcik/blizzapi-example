@@ -35,5 +35,4 @@ router.get('/validateRegionName/:regionName', (req, res) => {
   res.json(BattleNetUtils.validateRegionName(regionName));
 });
 
-
 module.exports = router;

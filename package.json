@@ -1,5 +1,5 @@
 {
-  "name": "starcraft2api-server",
+  "name": "blizzard-battlenet-api-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
