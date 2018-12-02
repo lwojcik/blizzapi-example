@@ -37,6 +37,16 @@ router.get('/validateRegionName/:regionName', (req, res) => {
   res.json(BattleNetUtils.validateRegionName(regionName));
 });
 
+/** Locales */
+
+router.get('/getAllLocales', (req, res) => {
+  res.json(BattleNetUtils.getAllLocales());
+});
+
+router.get('/getAllLocaleNames', (req, res) => {
+  res.json(BattleNetUtils.getAllLocaleNames());
+});
+
 /** Default locales */
 
 router.get('/getAllDefaultLocaleIndexes', (req, res) => {
