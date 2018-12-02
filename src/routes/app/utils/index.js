@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { BattleNetUtils } = require('../../../../../blizzard-battlenet-api');
 
+/** Regions */
+
 router.get('/getAllRegions', (req, res) => {
   res.json(BattleNetUtils.getAllRegions());
 });
@@ -33,6 +35,16 @@ router.get('/validateRegionId/:regionId', (req, res) => {
 router.get('/validateRegionName/:regionName', (req, res) => {
   const { regionName } = req.params;
   res.json(BattleNetUtils.validateRegionName(regionName));
+});
+
+/** Default locales */
+
+router.get('/getAllDefaultLocaleIndexes', (req, res) => {
+  res.json(BattleNetUtils.getAllDefaultLocaleIndexes());
+});
+
+router.get('/getAllDefaultLocales', (req, res) => {
+  res.json(BattleNetUtils.getAllDefaultLocaleIndexes());
 });
 
 module.exports = router;
