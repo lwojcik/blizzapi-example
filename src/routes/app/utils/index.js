@@ -47,6 +47,13 @@ router.get('/getAllLocaleNames', (req, res) => {
   res.json(BattleNetUtils.getAllLocaleNames());
 });
 
+router.get('/getLocalesByRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  const { paramType } = req.query.paramType || 'number';
+  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
+  res.json(BattleNetUtils.getLocalesByRegionId(regionIdParam));
+});
+
 /** Default locales */
 
 router.get('/getAllDefaultLocaleIndexes', (req, res) => {
