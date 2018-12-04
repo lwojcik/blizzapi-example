@@ -54,6 +54,21 @@ router.get('/getLocalesByRegionId/:regionId', (req, res) => {
   res.json(BattleNetUtils.getLocalesByRegionId(regionIdParam));
 });
 
+router.get('/checkIfLocaleLooksValid/:locale', (req, res) => {
+  const { locale } = req.params;
+  res.json(BattleNetUtils.checkIfLocaleLooksValid(locale));
+});
+
+router.get('/validateLocale/:locale', (req, res) => {
+  const { locale } = req.params;
+  res.json(BattleNetUtils.validateLocale(locale));
+});
+
+router.get('/isLocaleValidForRegionId/:locale/:regionId', (req, res) => {
+  const { locale, regionId } = req.params;
+  res.json(BattleNetUtils.isLocaleValidForRegionId(locale, regionId));
+});
+
 /** Default locales */
 
 router.get('/getAllDefaultLocaleIndexes', (req, res) => {
