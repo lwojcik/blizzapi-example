@@ -75,8 +75,18 @@ router.get('/getAllDefaultLocaleIndexes', (req, res) => {
   res.json(BattleNetUtils.getAllDefaultLocaleIndexes());
 });
 
-router.get('/getAllDefaultLocales', (req, res) => {
-  res.json(BattleNetUtils.getAllDefaultLocaleIndexes());
+router.get('/getDefaultLocaleIndexForRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  const { paramType } = req.query.paramType || 'number';
+  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
+  res.json(BattleNetUtils.getDefaultLocaleIndexForRegionId(regionIdParam));
+});
+
+router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  const { paramType } = req.query.paramType || 'number';
+  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
+  res.json(BattleNetUtils.getDefaultLocaleNameForRegionId(regionIdParam));
 });
 
 module.exports = router;
