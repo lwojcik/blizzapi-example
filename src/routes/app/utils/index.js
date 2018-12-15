@@ -132,8 +132,8 @@ router.get('/getAllApiHosts', (req, res) => {
 });
 
 router.get('/getApiHostByRegionId/:regionId', (req, res) => {
-  const { sc2Realm, regionId } = req.params;
-  res.json(BattleNetUtils.isSc2RealmValidForRegionId(sc2Realm, regionId));
+  const { regionId } = req.params;
+  res.json(BattleNetUtils.getApiHostByRegionId(regionId));
 });
 
 router.get('/getApiHostByRegionName/:regionName', (req, res) => {
