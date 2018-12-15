@@ -99,6 +99,10 @@ router.get('/getAllSc2Realms', (req, res) => {
   res.json(BattleNetUtils.getAllSc2Realms());
 });
 
+router.get('/getAllAvailableSc2Realms', (req, res) => {
+  res.json(BattleNetUtils.getAllAvailableSc2Realms());
+});
+
 router.get('/getSc2RealmsByRegionId/:regionId', (req, res) => {
   const { regionId } = req.params;
   const { paramType } = req.query.paramType || 'number';
@@ -109,6 +113,11 @@ router.get('/getSc2RealmsByRegionId/:regionId', (req, res) => {
 router.get('/checkIfSc2RealmLooksValid/:sc2Realm', (req, res) => {
   const { sc2Realm } = req.params;
   res.json(BattleNetUtils.checkIfSc2RealmLooksValid(sc2Realm));
+});
+
+router.get('/validateSc2Realm/:sc2Realm', (req, res) => {
+  const { sc2Realm } = req.params;
+  res.json(BattleNetUtils.validateSc2Realm(sc2Realm));
 });
 
 router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
