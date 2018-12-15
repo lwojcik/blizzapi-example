@@ -125,4 +125,20 @@ router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
   res.json(BattleNetUtils.isSc2RealmValidForRegionId(sc2Realm, regionId));
 });
 
+/** Region API hosts */
+
+router.get('/getAllApiHosts', (req, res) => {
+  res.json(BattleNetUtils.getAllApiHosts());
+});
+
+router.get('/getApiHostByRegionId/:regionId', (req, res) => {
+  const { sc2Realm, regionId } = req.params;
+  res.json(BattleNetUtils.isSc2RealmValidForRegionId(sc2Realm, regionId));
+});
+
+router.get('/getApiHostByRegionName/:regionName', (req, res) => {
+  const { regionName } = req.params;
+  res.json(BattleNetUtils.getApiHostByRegionName(regionName));
+});
+
 module.exports = router;
