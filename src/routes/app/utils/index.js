@@ -141,4 +141,53 @@ router.get('/getApiHostByRegionName/:regionName', (req, res) => {
   res.json(BattleNetUtils.getApiHostByRegionName(regionName));
 });
 
+/** OAuth authorize uris */
+
+router.get('/getAllAuthorizeUris', (req, res) => {
+  res.json(BattleNetUtils.getAllAuthorizeUris());
+});
+
+router.get('/getAuthorizeUriByRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  res.json(BattleNetUtils.getAuthorizeUriByRegionId(regionId));
+});
+
+router.get('/getAuthorizeUriByRegionName/:regionName', (req, res) => {
+  const { regionName } = req.params;
+  res.json(BattleNetUtils.getAuthorizeUriByRegionName(regionName));
+});
+
+/** OAuth token uris */
+
+router.get('/getAllTokenUris', (req, res) => {
+  res.json(BattleNetUtils.getAllTokenUris());
+});
+
+router.get('/getTokenUriByRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  res.json(BattleNetUtils.getTokenUriByRegionId(regionId));
+});
+
+router.get('/getTokenUriByRegionName/:regionName', (req, res) => {
+  const { regionName } = req.params;
+  res.json(BattleNetUtils.getTokenUriByRegionName(regionName));
+});
+
+/** OAuth check token uris */
+
+router.get('/getAllCheckTokenUris', (req, res) => {
+  res.json(BattleNetUtils.getAllCheckTokenUris());
+});
+
+router.get('/getCheckTokenUriByRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  res.json(BattleNetUtils.getCheckTokenUriByRegionId(regionId));
+});
+
+router.get('/getCheckUriByRegionName/:regionName', (req, res) => {
+  const { regionName } = req.params;
+  res.json(BattleNetUtils.getCheckTokenUriByRegionName(regionName));
+});
+
+
 module.exports = router;
