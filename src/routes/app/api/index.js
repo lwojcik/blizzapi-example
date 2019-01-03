@@ -8,8 +8,8 @@ router.get('/connect', (req, res) => {
   const clientSecret = '456';
   const region = 'us';
   const BnetApi = new BattleNetApi(region, clientId, clientSecret);
-  console.log(BnetApi);
-  res.json(BnetApi.connect());
+  BnetApi.connect();
+  res.json(BnetApi);
 });
 
 module.exports = router;
