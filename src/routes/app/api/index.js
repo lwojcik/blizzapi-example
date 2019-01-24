@@ -11,8 +11,8 @@ router.get('/query/:region', async (req, res) => {
     const { endpoint, accessToken } = req.query;
     const clientId = env.API_BATTLENET_KEY;
     const clientSecret = env.API_BATTLENET_SECRET;
-    const BnetApi = new BattleNetApi(region, clientId, clientSecret);
-    const response = await BnetApi.query(endpoint, accessToken);
+    const BnetApi = new BattleNetApi(region, clientId, clientSecret, accessToken);
+    const response = await BnetApi.query(endpoint);
     res.json(response);
   } catch (error) {
     res.send(error);
