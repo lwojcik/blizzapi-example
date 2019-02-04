@@ -1,3 +1,3 @@
-# blizzard-battlenet-api-example
+# BlizzAPI-example
 
 Under construction
