@@ -1,5 +1,7 @@
 const router = require('express').Router();
-const { BattleNetUtils } = require('../../../../../blizzard-battlenet-api');
+const {
+  BattleNetUtils
+} = require('../../../../../blizzapi');
 
 /** Regions */
 
@@ -16,24 +18,34 @@ router.get('/getAllRegionNames', (req, res) => {
 });
 
 router.get('/getRegionNameById/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
+  const {
+    regionId
+  } = req.params;
+  const {
+    paramType
+  } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BattleNetUtils.getRegionNameById(regionIdParam));
 });
 
 router.get('/getRegionIdByName/:regionName', (req, res) => {
-  const { regionName } = req.params;
+  const {
+    regionName
+  } = req.params;
   res.json(BattleNetUtils.getRegionIdByName(regionName));
 });
 
 router.get('/validateRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
+  const {
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.validateRegionId(regionId));
 });
 
 router.get('/validateRegionName/:regionName', (req, res) => {
-  const { regionName } = req.params;
+  const {
+    regionName
+  } = req.params;
   res.json(BattleNetUtils.validateRegionName(regionName));
 });
 
@@ -48,24 +60,35 @@ router.get('/getAllLocaleNames', (req, res) => {
 });
 
 router.get('/getLocalesByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
+  const {
+    regionId
+  } = req.params;
+  const {
+    paramType
+  } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BattleNetUtils.getLocalesByRegionId(regionIdParam));
 });
 
 router.get('/checkIfLocaleLooksValid/:locale', (req, res) => {
-  const { locale } = req.params;
+  const {
+    locale
+  } = req.params;
   res.json(BattleNetUtils.checkIfLocaleLooksValid(locale));
 });
 
 router.get('/validateLocale/:locale', (req, res) => {
-  const { locale } = req.params;
+  const {
+    locale
+  } = req.params;
   res.json(BattleNetUtils.validateLocale(locale));
 });
 
 router.get('/isLocaleValidForRegionId/:locale/:regionId', (req, res) => {
-  const { locale, regionId } = req.params;
+  const {
+    locale,
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.isLocaleValidForRegionId(locale, regionId));
 });
 
@@ -80,15 +103,23 @@ router.get('/getAllDefaultLocaleNames', (req, res) => {
 });
 
 router.get('/getDefaultLocaleIndexForRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
+  const {
+    regionId
+  } = req.params;
+  const {
+    paramType
+  } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BattleNetUtils.getDefaultLocaleIndexForRegionId(regionIdParam));
 });
 
 router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
+  const {
+    regionId
+  } = req.params;
+  const {
+    paramType
+  } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BattleNetUtils.getDefaultLocaleNameForRegionId(regionIdParam));
 });
@@ -104,24 +135,35 @@ router.get('/getAllAvailableSc2Realms', (req, res) => {
 });
 
 router.get('/getSc2RealmsByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
+  const {
+    regionId
+  } = req.params;
+  const {
+    paramType
+  } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BattleNetUtils.getSc2RealmsByRegionId(regionIdParam));
 });
 
 router.get('/checkIfSc2RealmLooksValid/:sc2Realm', (req, res) => {
-  const { sc2Realm } = req.params;
+  const {
+    sc2Realm
+  } = req.params;
   res.json(BattleNetUtils.checkIfSc2RealmLooksValid(sc2Realm));
 });
 
 router.get('/validateSc2Realm/:sc2Realm', (req, res) => {
-  const { sc2Realm } = req.params;
+  const {
+    sc2Realm
+  } = req.params;
   res.json(BattleNetUtils.validateSc2Realm(sc2Realm));
 });
 
 router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
-  const { sc2Realm, regionId } = req.params;
+  const {
+    sc2Realm,
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.isSc2RealmValidForRegionId(sc2Realm, regionId));
 });
 
@@ -132,12 +174,16 @@ router.get('/getAllApiHosts', (req, res) => {
 });
 
 router.get('/getApiHostByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
+  const {
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.getApiHostByRegionId(regionId));
 });
 
 router.get('/getApiHostByRegionName/:regionName', (req, res) => {
-  const { regionName } = req.params;
+  const {
+    regionName
+  } = req.params;
   res.json(BattleNetUtils.getApiHostByRegionName(regionName));
 });
 
@@ -148,12 +194,16 @@ router.get('/getAllAuthorizeUris', (req, res) => {
 });
 
 router.get('/getAuthorizeUriByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
+  const {
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.getAuthorizeUriByRegionId(regionId));
 });
 
 router.get('/getAuthorizeUriByRegionName/:regionName', (req, res) => {
-  const { regionName } = req.params;
+  const {
+    regionName
+  } = req.params;
   res.json(BattleNetUtils.getAuthorizeUriByRegionName(regionName));
 });
 
@@ -164,12 +214,16 @@ router.get('/getAllTokenUris', (req, res) => {
 });
 
 router.get('/getTokenUriByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
+  const {
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.getTokenUriByRegionId(regionId));
 });
 
 router.get('/getTokenUriByRegionName/:regionName', (req, res) => {
-  const { regionName } = req.params;
+  const {
+    regionName
+  } = req.params;
   res.json(BattleNetUtils.getTokenUriByRegionName(regionName));
 });
 
@@ -180,12 +234,16 @@ router.get('/getAllCheckTokenUris', (req, res) => {
 });
 
 router.get('/getCheckTokenUriByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
+  const {
+    regionId
+  } = req.params;
   res.json(BattleNetUtils.getCheckTokenUriByRegionId(regionId));
 });
 
 router.get('/getCheckUriByRegionName/:regionName', (req, res) => {
-  const { regionName } = req.params;
+  const {
+    regionName
+  } = req.params;
   res.json(BattleNetUtils.getCheckTokenUriByRegionName(regionName));
 });
 

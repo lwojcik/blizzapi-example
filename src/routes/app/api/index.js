@@ -5,7 +5,7 @@ const {
 } = process;
 const {
   BattleNetApi,
-} = require('../../../../../blizzard-battlenet-api');
+} = require('../../../../../blizzapi');
 
 /** Regions */
 
