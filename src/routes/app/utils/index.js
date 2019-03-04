@@ -1,250 +1,250 @@
 const router = require('express').Router();
 const {
-  BattleNetUtils
+  BlizzUtils,
 } = require('../../../../../blizzapi');
 
 /** Regions */
 
 router.get('/getAllRegions', (req, res) => {
-  res.json(BattleNetUtils.getAllRegions());
+  res.json(BlizzUtils.getAllRegions());
 });
 
 router.get('/getAllRegionIds', (req, res) => {
-  res.json(BattleNetUtils.getAllRegionIds());
+  res.json(BlizzUtils.getAllRegionIds());
 });
 
 router.get('/getAllRegionNames', (req, res) => {
-  res.json(BattleNetUtils.getAllRegionNames());
+  res.json(BlizzUtils.getAllRegionNames());
 });
 
 router.get('/getRegionNameById/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
   const {
-    paramType
+    paramType,
   } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BattleNetUtils.getRegionNameById(regionIdParam));
+  res.json(BlizzUtils.getRegionNameById(regionIdParam));
 });
 
 router.get('/getRegionIdByName/:regionName', (req, res) => {
   const {
-    regionName
+    regionName,
   } = req.params;
-  res.json(BattleNetUtils.getRegionIdByName(regionName));
+  res.json(BlizzUtils.getRegionIdByName(regionName));
 });
 
 router.get('/validateRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.validateRegionId(regionId));
+  res.json(BlizzUtils.validateRegionId(regionId));
 });
 
 router.get('/validateRegionName/:regionName', (req, res) => {
   const {
-    regionName
+    regionName,
   } = req.params;
-  res.json(BattleNetUtils.validateRegionName(regionName));
+  res.json(BlizzUtils.validateRegionName(regionName));
 });
 
 /** Locales */
 
 router.get('/getAllLocales', (req, res) => {
-  res.json(BattleNetUtils.getAllLocales());
+  res.json(BlizzUtils.getAllLocales());
 });
 
 router.get('/getAllLocaleNames', (req, res) => {
-  res.json(BattleNetUtils.getAllLocaleNames());
+  res.json(BlizzUtils.getAllLocaleNames());
 });
 
 router.get('/getLocalesByRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
   const {
-    paramType
+    paramType,
   } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BattleNetUtils.getLocalesByRegionId(regionIdParam));
+  res.json(BlizzUtils.getLocalesByRegionId(regionIdParam));
 });
 
 router.get('/checkIfLocaleLooksValid/:locale', (req, res) => {
   const {
-    locale
+    locale,
   } = req.params;
-  res.json(BattleNetUtils.checkIfLocaleLooksValid(locale));
+  res.json(BlizzUtils.checkIfLocaleLooksValid(locale));
 });
 
 router.get('/validateLocale/:locale', (req, res) => {
   const {
-    locale
+    locale,
   } = req.params;
-  res.json(BattleNetUtils.validateLocale(locale));
+  res.json(BlizzUtils.validateLocale(locale));
 });
 
 router.get('/isLocaleValidForRegionId/:locale/:regionId', (req, res) => {
   const {
     locale,
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.isLocaleValidForRegionId(locale, regionId));
+  res.json(BlizzUtils.isLocaleValidForRegionId(locale, regionId));
 });
 
 /** Default locales */
 
 router.get('/getAllDefaultLocaleIndexes', (req, res) => {
-  res.json(BattleNetUtils.getAllDefaultLocaleIndexes());
+  res.json(BlizzUtils.getAllDefaultLocaleIndexes());
 });
 
 router.get('/getAllDefaultLocaleNames', (req, res) => {
-  res.json(BattleNetUtils.getAllDefaultLocaleNames());
+  res.json(BlizzUtils.getAllDefaultLocaleNames());
 });
 
 router.get('/getDefaultLocaleIndexForRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
   const {
-    paramType
+    paramType,
   } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BattleNetUtils.getDefaultLocaleIndexForRegionId(regionIdParam));
+  res.json(BlizzUtils.getDefaultLocaleIndexForRegionId(regionIdParam));
 });
 
 router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
   const {
-    paramType
+    paramType,
   } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BattleNetUtils.getDefaultLocaleNameForRegionId(regionIdParam));
+  res.json(BlizzUtils.getDefaultLocaleNameForRegionId(regionIdParam));
 });
 
 /** SC2 realms */
 
 router.get('/getAllSc2Realms', (req, res) => {
-  res.json(BattleNetUtils.getAllSc2Realms());
+  res.json(BlizzUtils.getAllSc2Realms());
 });
 
 router.get('/getAllAvailableSc2Realms', (req, res) => {
-  res.json(BattleNetUtils.getAllAvailableSc2Realms());
+  res.json(BlizzUtils.getAllAvailableSc2Realms());
 });
 
 router.get('/getSc2RealmsByRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
   const {
-    paramType
+    paramType,
   } = req.query.paramType || 'number';
-  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BattleNetUtils.getSc2RealmsByRegionId(regionIdParam));
+  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId, 10);
+  res.json(BlizzUtils.getSc2RealmsByRegionId(regionIdParam));
 });
 
 router.get('/checkIfSc2RealmLooksValid/:sc2Realm', (req, res) => {
   const {
-    sc2Realm
+    sc2Realm,
   } = req.params;
-  res.json(BattleNetUtils.checkIfSc2RealmLooksValid(sc2Realm));
+  res.json(BlizzUtils.checkIfSc2RealmLooksValid(sc2Realm));
 });
 
 router.get('/validateSc2Realm/:sc2Realm', (req, res) => {
   const {
-    sc2Realm
+    sc2Realm,
   } = req.params;
-  res.json(BattleNetUtils.validateSc2Realm(sc2Realm));
+  res.json(BlizzUtils.validateSc2Realm(sc2Realm));
 });
 
 router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
   const {
     sc2Realm,
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.isSc2RealmValidForRegionId(sc2Realm, regionId));
+  res.json(BlizzUtils.isSc2RealmValidForRegionId(sc2Realm, regionId));
 });
 
 /** Region API hosts */
 
 router.get('/getAllApiHosts', (req, res) => {
-  res.json(BattleNetUtils.getAllApiHosts());
+  res.json(BlizzUtils.getAllApiHosts());
 });
 
 router.get('/getApiHostByRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.getApiHostByRegionId(regionId));
+  res.json(BlizzUtils.getApiHostByRegionId(regionId));
 });
 
 router.get('/getApiHostByRegionName/:regionName', (req, res) => {
   const {
-    regionName
+    regionName,
   } = req.params;
-  res.json(BattleNetUtils.getApiHostByRegionName(regionName));
+  res.json(BlizzUtils.getApiHostByRegionName(regionName));
 });
 
 /** OAuth authorize uris */
 
 router.get('/getAllAuthorizeUris', (req, res) => {
-  res.json(BattleNetUtils.getAllAuthorizeUris());
+  res.json(BlizzUtils.getAllAuthorizeUris());
 });
 
 router.get('/getAuthorizeUriByRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.getAuthorizeUriByRegionId(regionId));
+  res.json(BlizzUtils.getAuthorizeUriByRegionId(regionId));
 });
 
 router.get('/getAuthorizeUriByRegionName/:regionName', (req, res) => {
   const {
-    regionName
+    regionName,
   } = req.params;
-  res.json(BattleNetUtils.getAuthorizeUriByRegionName(regionName));
+  res.json(BlizzUtils.getAuthorizeUriByRegionName(regionName));
 });
 
 /** OAuth token uris */
 
 router.get('/getAllTokenUris', (req, res) => {
-  res.json(BattleNetUtils.getAllTokenUris());
+  res.json(BlizzUtils.getAllTokenUris());
 });
 
 router.get('/getTokenUriByRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.getTokenUriByRegionId(regionId));
+  res.json(BlizzUtils.getTokenUriByRegionId(regionId));
 });
 
 router.get('/getTokenUriByRegionName/:regionName', (req, res) => {
   const {
-    regionName
+    regionName,
   } = req.params;
-  res.json(BattleNetUtils.getTokenUriByRegionName(regionName));
+  res.json(BlizzUtils.getTokenUriByRegionName(regionName));
 });
 
 /** OAuth check token uris */
 
 router.get('/getAllCheckTokenUris', (req, res) => {
-  res.json(BattleNetUtils.getAllCheckTokenUris());
+  res.json(BlizzUtils.getAllCheckTokenUris());
 });
 
 router.get('/getCheckTokenUriByRegionId/:regionId', (req, res) => {
   const {
-    regionId
+    regionId,
   } = req.params;
-  res.json(BattleNetUtils.getCheckTokenUriByRegionId(regionId));
+  res.json(BlizzUtils.getCheckTokenUriByRegionId(regionId));
 });
 
 router.get('/getCheckUriByRegionName/:regionName', (req, res) => {
   const {
-    regionName
+    regionName,
   } = req.params;
-  res.json(BattleNetUtils.getCheckTokenUriByRegionName(regionName));
+  res.json(BlizzUtils.getCheckTokenUriByRegionName(regionName));
 });
 
 

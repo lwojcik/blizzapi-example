@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "blizzapi": "0.0.8",
     "body-parser": "1.18.3",
     "dotenv": "6.1.0",
     "express": "4.16.4"
