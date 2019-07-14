@@ -4,7 +4,6 @@ const BlizzAPI = require('../../../../../blizzapi1');
 /** Regions */
 
 router.get('/getAllRegions', (req, res) => {
-  console.log(BlizzAPI);
   res.json(BlizzAPI.getAllRegions());
 });
 
@@ -17,9 +16,7 @@ router.get('/getAllRegionNames', (req, res) => {
 });
 
 router.get('/getRegionNameById/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   const {
     paramType,
   } = req.query.paramType || 'number';
@@ -28,23 +25,17 @@ router.get('/getRegionNameById/:regionId', (req, res) => {
 });
 
 router.get('/getRegionIdByName/:regionName', (req, res) => {
-  const {
-    regionName,
-  } = req.params;
+  const { regionName } = req.params;
   res.json(BlizzAPI.getRegionIdByName(regionName));
 });
 
 router.get('/validateRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   res.json(BlizzAPI.validateRegionId(regionId));
 });
 
 router.get('/validateRegionName/:regionName', (req, res) => {
-  const {
-    regionName,
-  } = req.params;
+  const { regionName } = req.params;
   res.json(BlizzAPI.validateRegionName(regionName));
 });
 
@@ -59,9 +50,7 @@ router.get('/getAllLocaleNames', (req, res) => {
 });
 
 router.get('/getLocalesByRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   const {
     paramType,
   } = req.query.paramType || 'number';
@@ -70,24 +59,17 @@ router.get('/getLocalesByRegionId/:regionId', (req, res) => {
 });
 
 router.get('/checkIfLocaleLooksValid/:locale', (req, res) => {
-  const {
-    locale,
-  } = req.params;
+  const { locale } = req.params;
   res.json(BlizzAPI.checkIfLocaleLooksValid(locale));
 });
 
 router.get('/validateLocale/:locale', (req, res) => {
-  const {
-    locale,
-  } = req.params;
+  const { locale } = req.params;
   res.json(BlizzAPI.validateLocale(locale));
 });
 
 router.get('/isLocaleValidForRegionId/:locale/:regionId', (req, res) => {
-  const {
-    locale,
-    regionId,
-  } = req.params;
+  const { locale, regionId } = req.params;
   res.json(BlizzAPI.isLocaleValidForRegionId(locale, regionId));
 });
 
@@ -102,23 +84,15 @@ router.get('/getAllDefaultLocaleNames', (req, res) => {
 });
 
 router.get('/getDefaultLocaleIndexForRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
-  const {
-    paramType,
-  } = req.query.paramType || 'number';
+  const { regionId } = req.params;
+  const { paramType } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BlizzAPI.getDefaultLocaleIndexForRegionId(regionIdParam));
 });
 
 router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
-  const {
-    paramType,
-  } = req.query.paramType || 'number';
+  const { regionId } = req.params;
+  const { paramType } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BlizzAPI.getDefaultLocaleNameForRegionId(regionIdParam));
 });
@@ -134,35 +108,24 @@ router.get('/getAllAvailableSc2Realms', (req, res) => {
 });
 
 router.get('/getSc2RealmsByRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
-  const {
-    paramType,
-  } = req.query.paramType || 'number';
+  const { regionId } = req.params;
+  const { paramType } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId, 10);
   res.json(BlizzAPI.getSc2RealmsByRegionId(regionIdParam));
 });
 
 router.get('/checkIfSc2RealmLooksValid/:sc2Realm', (req, res) => {
-  const {
-    sc2Realm,
-  } = req.params;
+  const { sc2Realm } = req.params;
   res.json(BlizzAPI.checkIfSc2RealmLooksValid(sc2Realm));
 });
 
 router.get('/validateSc2Realm/:sc2Realm', (req, res) => {
-  const {
-    sc2Realm,
-  } = req.params;
+  const { sc2Realm } = req.params;
   res.json(BlizzAPI.validateSc2Realm(sc2Realm));
 });
 
 router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
-  const {
-    sc2Realm,
-    regionId,
-  } = req.params;
+  const { sc2Realm, regionId } = req.params;
   res.json(BlizzAPI.isSc2RealmValidForRegionId(sc2Realm, regionId));
 });
 
@@ -173,16 +136,12 @@ router.get('/getAllApiHosts', (req, res) => {
 });
 
 router.get('/getApiHostByRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   res.json(BlizzAPI.getApiHostByRegionId(regionId));
 });
 
 router.get('/getApiHostByRegionName/:regionName', (req, res) => {
-  const {
-    regionName,
-  } = req.params;
+  const { regionName } = req.params;
   res.json(BlizzAPI.getApiHostByRegionName(regionName));
 });
 
@@ -193,16 +152,12 @@ router.get('/getAllAuthorizeUris', (req, res) => {
 });
 
 router.get('/getAuthorizeUriByRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   res.json(BlizzAPI.getAuthorizeUriByRegionId(regionId));
 });
 
 router.get('/getAuthorizeUriByRegionName/:regionName', (req, res) => {
-  const {
-    regionName,
-  } = req.params;
+  const { regionName } = req.params;
   res.json(BlizzAPI.getAuthorizeUriByRegionName(regionName));
 });
 
@@ -213,16 +168,12 @@ router.get('/getAllTokenUris', (req, res) => {
 });
 
 router.get('/getTokenUriByRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   res.json(BlizzAPI.getTokenUriByRegionId(regionId));
 });
 
 router.get('/getTokenUriByRegionName/:regionName', (req, res) => {
-  const {
-    regionName,
-  } = req.params;
+  const { regionName } = req.params;
   res.json(BlizzAPI.getTokenUriByRegionName(regionName));
 });
 
@@ -233,16 +184,12 @@ router.get('/getAllCheckTokenUris', (req, res) => {
 });
 
 router.get('/getCheckTokenUriByRegionId/:regionId', (req, res) => {
-  const {
-    regionId,
-  } = req.params;
+  const { regionId } = req.params;
   res.json(BlizzAPI.getCheckTokenUriByRegionId(regionId));
 });
 
 router.get('/getCheckUriByRegionName/:regionName', (req, res) => {
-  const {
-    regionName,
-  } = req.params;
+  const { regionName } = req.params;
   res.json(BlizzAPI.getCheckTokenUriByRegionName(regionName));
 });
 
