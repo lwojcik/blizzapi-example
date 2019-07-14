@@ -4,6 +4,7 @@ const BlizzAPI = require('../../../../../blizzapi1');
 /** Regions */
 
 router.get('/getAllRegions', (req, res) => {
+  console.log(BlizzAPI);
   res.json(BlizzAPI.getAllRegions());
 });
 
