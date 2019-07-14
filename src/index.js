@@ -18,5 +18,5 @@ require('./routes/index')(app);
 
 /** Starting server */
 module.exports = http.createServer(app).listen(port, () => {
-  console.log(`API server started on port ${port}`); // eslint-disable-line no-console
+  console.log(`blizzapi-example started on port ${port}`); // eslint-disable-line no-console
 });
