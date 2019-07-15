@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const BlizzAPI = require('../../../../../blizzapi1');
+const BlizzAPI = require('../../../../../blizzapi1/dist/index');
 
 /** Regions */
 
@@ -17,9 +17,7 @@ router.get('/getAllRegionNames', (req, res) => {
 
 router.get('/getRegionNameById/:regionId', (req, res) => {
   const { regionId } = req.params;
-  const {
-    paramType,
-  } = req.query.paramType || 'number';
+  const { paramType } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BlizzAPI.getRegionNameById(regionIdParam));
 });
@@ -51,9 +49,7 @@ router.get('/getAllLocaleNames', (req, res) => {
 
 router.get('/getLocalesByRegionId/:regionId', (req, res) => {
   const { regionId } = req.params;
-  const {
-    paramType,
-  } = req.query.paramType || 'number';
+  const { paramType } = req.query.paramType || 'number';
   const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
   res.json(BlizzAPI.getLocalesByRegionId(regionIdParam));
 });
@@ -132,17 +128,13 @@ router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
 /** Region API hosts */
 
 router.get('/getAllApiHosts', (req, res) => {
+  console.log(BlizzAPI);
   res.json(BlizzAPI.getAllApiHosts());
 });
 
-router.get('/getApiHostByRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  res.json(BlizzAPI.getApiHostByRegionId(regionId));
-});
-
-router.get('/getApiHostByRegionName/:regionName', (req, res) => {
-  const { regionName } = req.params;
-  res.json(BlizzAPI.getApiHostByRegionName(regionName));
+router.get('/getApiHostByRegion/:regionIdOrName', (req, res) => {
+  const { regionIdOrName } = req.params;
+  res.json(BlizzAPI.getApiHostByRegion(regionIdOrName));
 });
 
 /** OAuth authorize uris */
@@ -164,6 +156,7 @@ router.get('/getAuthorizeUriByRegionName/:regionName', (req, res) => {
 /** OAuth token uris */
 
 router.get('/getAllTokenUris', (req, res) => {
+  console.log(BlizzAPI);
   res.json(BlizzAPI.getAllTokenUris());
 });
 
