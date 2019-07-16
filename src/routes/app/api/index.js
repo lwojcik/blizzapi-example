@@ -3,7 +3,7 @@ const router = require('express').Router();
 const {
   env,
 } = process;
-const BlizzAPI = require('../../../../../blizzapi1');
+const BlizzAPI = require('../../../../../blizzapi1/dist/index');
 
 /** Regions */
 
@@ -18,12 +18,16 @@ router.get('/query/:region', async (req, res) => {
     } = req.query;
     const clientId = env.API_BATTLENET_KEY;
     const clientSecret = env.API_BATTLENET_SECRET;
-    const BnetApi = new BlizzAPI(region, clientId, clientSecret, accessToken);
+    const BnetApi = new BlizzAPI({
+      region,
+      clientId,
+      clientSecret,
+    });
     const response = await BnetApi.query(endpoint);
-    // console.log(response);
+    console.log(response);
     res.json(response);
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     res.send(error);
   }
 });
