@@ -69,30 +69,6 @@ router.get('/isLocaleValidForRegionId/:locale/:regionId', (req, res) => {
   res.json(BlizzAPI.isLocaleValidForRegionId(locale, regionId));
 });
 
-/** Default locales */
-
-router.get('/getAllDefaultLocaleIndexes', (req, res) => {
-  res.json(BlizzAPI.getAllDefaultLocaleIndexes());
-});
-
-router.get('/getAllDefaultLocaleNames', (req, res) => {
-  res.json(BlizzAPI.getAllDefaultLocaleNames());
-});
-
-router.get('/getDefaultLocaleIndexForRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
-  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BlizzAPI.getDefaultLocaleIndexForRegionId(regionIdParam));
-});
-
-router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
-  const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
-  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BlizzAPI.getDefaultLocaleNameForRegionId(regionIdParam));
-});
-
 /** SC2 realms */
 
 router.get('/getAllSc2Realms', (req, res) => {
