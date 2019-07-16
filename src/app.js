@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -17,6 +15,4 @@ app.set('json spaces', 2);
 require('./routes/index')(app);
 
 /** Starting server */
-module.exports = http.createServer(app).listen(port, () => {
-  console.log(`blizzapi-example started on port ${port}`); // eslint-disable-line no-console
-});
+module.exports = app;
