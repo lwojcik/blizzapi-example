@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const BlizzAPI = require('../../../../../blizzapi1/dist/index');
+const BlizzAPI = require('blizzapi');
 
 /** Regions */
 

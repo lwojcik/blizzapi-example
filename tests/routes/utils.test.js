@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../src/app');
+const app = require('../../src/app');
 
 const regionIds = [ 1, 2, 3, 5 ];
 

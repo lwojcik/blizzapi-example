@@ -7,6 +7,7 @@ module.exports = {
   ],
   coverageDirectory: "coverage",
   testEnvironment: "node",
+  automock: false,
   // coverageThreshold: {
   //   global: {
   //     branches: 100,
