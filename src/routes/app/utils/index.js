@@ -17,9 +17,7 @@ router.get('/getAllRegionNames', (req, res) => {
 
 router.get('/getRegionNameById/:regionId', (req, res) => {
   const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
-  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BlizzAPI.getRegionNameById(regionIdParam));
+  res.json(BlizzAPI.getRegionNameById(regionId));
 });
 
 router.get('/getRegionIdByName/:regionName', (req, res) => {
@@ -49,9 +47,7 @@ router.get('/getAllLocaleNames', (req, res) => {
 
 router.get('/getLocalesByRegionId/:regionId', (req, res) => {
   const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
-  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId);
-  res.json(BlizzAPI.getLocalesByRegionId(regionIdParam));
+  res.json(BlizzAPI.getLocalesByRegionId(regionId));
 });
 
 router.get('/checkIfLocaleLooksValid/:locale', (req, res) => {
@@ -81,9 +77,7 @@ router.get('/getAllAvailableSc2Realms', (req, res) => {
 
 router.get('/getSc2RealmsByRegionId/:regionId', (req, res) => {
   const { regionId } = req.params;
-  const { paramType } = req.query.paramType || 'number';
-  const regionIdParam = paramType === 'string' ? regionId.toString() : parseInt(regionId, 10);
-  res.json(BlizzAPI.getSc2RealmsByRegionId(regionIdParam));
+  res.json(BlizzAPI.getSc2RealmsByRegionId(regionId));
 });
 
 router.get('/checkIfSc2RealmLooksValid/:sc2Realm', (req, res) => {
