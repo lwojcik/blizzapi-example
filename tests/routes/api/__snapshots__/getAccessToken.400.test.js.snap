@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/getAccessToken/:region (error 400) error response should match snapshot 1`] = `
+Object {
+  "error": "Failed to receive Battle.net API data",
+}
+`;

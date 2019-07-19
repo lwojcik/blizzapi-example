@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/utils/checkIfLocaleLooksValid/de_DE should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/en_GB should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/en_US should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/es_ES should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/es_MX should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/fr_FR should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/it_IT should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/ko_KR should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/pt_BR should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/pt_PT should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/ru_RU should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/zh_CN should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfLocaleLooksValid/zh_TW should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfSc2RealmLooksValid/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/checkIfSc2RealmLooksValid/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/getAllAvailableSc2Realms should match snapshot 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`/utils/getAllLocaleNames should match snapshot 1`] = `
+Array [
+  "en_US",
+  "es_MX",
+  "pt_BR",
+  "en_GB",
+  "es_ES",
+  "fr_FR",
+  "ru_RU",
+  "de_DE",
+  "pt_PT",
+  "it_IT",
+  "ko_KR",
+  "zh_TW",
+  "zh_CN",
+]
+`;
+
+exports[`/utils/getAllLocales should match snapshot 1`] = `
+Object {
+  "1": Array [
+    "en_US",
+    "es_MX",
+    "pt_BR",
+  ],
+  "2": Array [
+    "en_GB",
+    "es_ES",
+    "fr_FR",
+    "ru_RU",
+    "de_DE",
+    "pt_PT",
+    "it_IT",
+  ],
+  "3": Array [
+    "ko_KR",
+    "zh_TW",
+  ],
+  "5": Array [
+    "zh_CN",
+  ],
+}
+`;
+
+exports[`/utils/getAllRegionIds should match snapshot 1`] = `
+Array [
+  1,
+  2,
+  3,
+  5,
+]
+`;
+
+exports[`/utils/getAllRegionNames should match snapshot 1`] = `
+Array [
+  "us",
+  "eu",
+  "kr",
+  "tw",
+  "cn",
+]
+`;
+
+exports[`/utils/getAllRegions should match snapshot 1`] = `
+Object {
+  "1": Array [
+    "us",
+  ],
+  "2": Array [
+    "eu",
+  ],
+  "3": Array [
+    "kr",
+    "tw",
+  ],
+  "5": Array [
+    "cn",
+  ],
+}
+`;
+
+exports[`/utils/getAllSc2Realms should match snapshot 1`] = `
+Object {
+  "1": Array [
+    1,
+    2,
+  ],
+  "2": Array [
+    1,
+    2,
+  ],
+  "3": Array [
+    1,
+    2,
+  ],
+  "5": Array [
+    1,
+  ],
+}
+`;
+
+exports[`/utils/getLocalesByRegionId/1 should match snapshot 1`] = `
+Array [
+  "en_US",
+  "es_MX",
+  "pt_BR",
+]
+`;
+
+exports[`/utils/getLocalesByRegionId/2 should match snapshot 1`] = `
+Array [
+  "en_GB",
+  "es_ES",
+  "fr_FR",
+  "ru_RU",
+  "de_DE",
+  "pt_PT",
+  "it_IT",
+]
+`;
+
+exports[`/utils/getLocalesByRegionId/3 should match snapshot 1`] = `
+Array [
+  "ko_KR",
+  "zh_TW",
+]
+`;
+
+exports[`/utils/getLocalesByRegionId/5 should match snapshot 1`] = `
+Array [
+  "zh_CN",
+]
+`;
+
+exports[`/utils/getRegionIdByName/cn should match snapshot 1`] = `5`;
+
+exports[`/utils/getRegionIdByName/eu should match snapshot 1`] = `2`;
+
+exports[`/utils/getRegionIdByName/kr should match snapshot 1`] = `3`;
+
+exports[`/utils/getRegionIdByName/tw should match snapshot 1`] = `3`;
+
+exports[`/utils/getRegionIdByName/us should match snapshot 1`] = `1`;
+
+exports[`/utils/getRegionNameById/1 should match snapshot 1`] = `
+Array [
+  "us",
+]
+`;
+
+exports[`/utils/getRegionNameById/2 should match snapshot 1`] = `
+Array [
+  "eu",
+]
+`;
+
+exports[`/utils/getRegionNameById/3 should match snapshot 1`] = `
+Array [
+  "kr",
+  "tw",
+]
+`;
+
+exports[`/utils/getRegionNameById/5 should match snapshot 1`] = `
+Array [
+  "cn",
+]
+`;
+
+exports[`/utils/getSc2RealmsByRegionId/1 should match snapshot 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`/utils/getSc2RealmsByRegionId/2 should match snapshot 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`/utils/getSc2RealmsByRegionId/3 should match snapshot 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`/utils/getSc2RealmsByRegionId/5 should match snapshot 1`] = `
+Array [
+  1,
+]
+`;
+
+exports[`/utils/isLocaleValidForRegionId/de_DE/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/de_DE/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/de_DE/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/de_DE/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/en_GB/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/en_GB/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/en_GB/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/en_GB/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/en_US/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/en_US/2 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/en_US/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/en_US/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/es_ES/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/es_ES/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/es_ES/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/es_ES/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/es_MX/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/es_MX/2 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/es_MX/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/es_MX/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/fr_FR/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/fr_FR/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/fr_FR/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/fr_FR/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/it_IT/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/it_IT/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/it_IT/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/it_IT/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/ko_KR/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/ko_KR/2 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/ko_KR/3 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/ko_KR/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_BR/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_BR/2 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_BR/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_BR/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_PT/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_PT/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_PT/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/pt_PT/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/ru_RU/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/ru_RU/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/ru_RU/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/ru_RU/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_CN/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_CN/2 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_CN/3 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_CN/5 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_TW/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_TW/2 should match snapshot 1`] = `false`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_TW/3 should match snapshot 1`] = `true`;
+
+exports[`/utils/isLocaleValidForRegionId/zh_TW/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/isSc2RealmValidForRegionId/1/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/1/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/1/3 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/1/5 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/2/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/2/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/2/3 should match snapshot 1`] = `true`;
+
+exports[`/utils/isSc2RealmValidForRegionId/2/5 should match snapshot 1`] = `false`;
+
+exports[`/utils/validateLocale/de_DE should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/en_GB should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/en_US should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/es_ES should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/es_MX should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/fr_FR should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/it_IT should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/ko_KR should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/pt_BR should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/pt_PT should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/ru_RU should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/zh_CN should match snapshot 1`] = `true`;
+
+exports[`/utils/validateLocale/zh_TW should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionId/0 should match snapshot 1`] = `false`;
+
+exports[`/utils/validateRegionId/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionId/2 should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionId/3 should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionId/5 should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionId/9 should match snapshot 1`] = `false`;
+
+exports[`/utils/validateRegionName/1 should match snapshot 1`] = `false`;
+
+exports[`/utils/validateRegionName/aaa should match snapshot 1`] = `false`;
+
+exports[`/utils/validateRegionName/cn should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionName/eu should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionName/kr should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionName/tw should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionName/us should match snapshot 1`] = `true`;
+
+exports[`/utils/validateRegionName/zzz should match snapshot 1`] = `false`;
+
+exports[`/utils/validateSc2Realm/1 should match snapshot 1`] = `true`;
+
+exports[`/utils/validateSc2Realm/2 should match snapshot 1`] = `true`;
