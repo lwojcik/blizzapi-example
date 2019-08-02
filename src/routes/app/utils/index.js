@@ -95,4 +95,14 @@ router.get('/isSc2RealmValidForRegionId/:sc2Realm/:regionId', (req, res) => {
   res.json(BlizzAPI.isSc2RealmValidForRegionId(sc2Realm, regionId));
 });
 
+router.get('/getAllDefaultLocaleNames', (req, res) => {
+  res.json(BlizzAPI.getAllDefaultLocaleNames());
+});
+
+router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
+  const { regionId } = req.params;
+  res.json(BlizzAPI.getDefaultLocaleNameForRegionId(regionId));
+});
+
+
 module.exports = router;
