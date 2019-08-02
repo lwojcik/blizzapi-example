@@ -37,6 +37,15 @@ Array [
 ]
 `;
 
+exports[`/utils/getAllDefaultLocaleNames should match snapshot 1`] = `
+Object {
+  "1": "en_US",
+  "2": "en_GB",
+  "3": "ko_KR",
+  "5": "zh_CN",
+}
+`;
+
 exports[`/utils/getAllLocaleNames should match snapshot 1`] = `
 Array [
   "en_US",
@@ -137,6 +146,14 @@ Object {
   ],
 }
 `;
+
+exports[`/utils/getDefaultLocaleNameForRegionId/1 should match snapshot 1`] = `"en_US"`;
+
+exports[`/utils/getDefaultLocaleNameForRegionId/2 should match snapshot 1`] = `"en_GB"`;
+
+exports[`/utils/getDefaultLocaleNameForRegionId/3 should match snapshot 1`] = `"ko_KR"`;
+
+exports[`/utils/getDefaultLocaleNameForRegionId/5 should match snapshot 1`] = `"zh_CN"`;
 
 exports[`/utils/getLocalesByRegionId/1 should match snapshot 1`] = `
 Array [
