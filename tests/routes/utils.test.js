@@ -55,6 +55,8 @@ const routes = [
   ...getRouteArray('checkIfLocaleLooksValid', locales),
   ...getRouteArray('validateLocale', locales),
   ...getRouteArray('isLocaleValidForRegionId', getParams(locales, regionIds)),
+  '/utils/getAllDefaultLocaleNames',
+  ...getRouteArray('getDefaultLocaleNameForRegionId', regionIds),
   '/utils/getAllSc2Realms',
   '/utils/getAllAvailableSc2Realms',
   ...getRouteArray('getSc2RealmsByRegionId', regionIds),
