@@ -13,6 +13,7 @@ Note that this project is for illustrative purposes only. It is not designed to 
 
 ```bash
 git clone https://github.com/lukemnet/blizzapi-example.git
+cd blizzapi-example
 npm install
 ```
 
