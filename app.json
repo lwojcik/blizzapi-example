@@ -7,7 +7,6 @@
   "image": "heroku/nodejs",
   "env": {
     "NODE_ENV": "production",
-    "API_PORT": "8080",
     "API_BATTLENET_KEY": {
       "description": "Battle.net app client ID",
       "value": ""
