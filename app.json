@@ -17,6 +17,6 @@
     }
   },
   "scripts": {
-    "postdeploy": "npm install && npm run build"
+    "postdeploy": "npm test"
   }
 }
