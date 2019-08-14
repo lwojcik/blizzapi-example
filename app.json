@@ -15,8 +15,5 @@
       "description": "Battle.net app client secret",
       "value": ""
     }
-  },
-  "scripts": {
-    "postdeploy": "npm test"
   }
 }
