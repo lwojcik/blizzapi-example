@@ -1,0 +1,22 @@
+{
+  "name": "blizzapi-example",
+  "description": "A template for getting started with the popular Ruby framework.",
+  "website": "https://blizzapi.lukem.net/",
+  "repository": "https://github.com/lukemnet/blizzapi-example",
+  "success_url": "/",
+  "image": "heroku/nodejs",
+  "env": {
+    "NODE_ENV": "production",
+    "API_BATTLENET_KEY": {
+      "description": "Battle.net app client ID",
+      "value": ""
+    },
+    "API_BATTLENET_SECRET": {
+      "description": "Battle.net app client secret",
+      "value": ""
+    }
+  },
+  "scripts": {
+    "postdeploy": "npm install && npm run build"
+  }
+}
