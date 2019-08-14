@@ -12,7 +12,7 @@ Sample REST API based on Express.js demonstrating [BlizzAPI](https://github.com/
 
 Note that this project is for illustrative purposes only. It is not designed to run as a production server.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Flukemnet%2Fblizzapi-example)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Install
 
