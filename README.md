@@ -12,7 +12,6 @@ Sample REST API based on Express.js demonstrating [BlizzAPI](https://github.com/
 Note that this project is for illustrative purposes only. It is not designed to run as a production server.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/lukemnet/blizzapi-example&env=API_BATTLENET_KEY&env=API_BATTLENET_SECRET)
 
 ## Install
 
