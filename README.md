@@ -3,7 +3,6 @@
 # blizzapi-example
 
 [![Travis CI Build Status](https://travis-ci.org/lukemnet/blizzapi-example.svg?branch=master)](https://travis-ci.org/lukemnet/blizzapi-example)
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/pb6cxsu7qsfdrs4e/branch/master?svg=true)](https://ci.appveyor.com/project/lwojcik/blizzapi-example/branch/master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/088ec8ed788ec238a671/maintainability)](https://codeclimate.com/github/lukemnet/blizzapi-example/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/088ec8ed788ec238a671/test_coverage)](https://codeclimate.com/github/lukemnet/blizzapi-example/test_coverage)
 
@@ -13,7 +12,6 @@ Sample REST API based on Express.js demonstrating [BlizzAPI](https://github.com/
 Note that this project is for illustrative purposes only. It is not designed to run as a production server.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/lukemnet/blizzapi-example&env=API_BATTLENET_KEY&env=API_BATTLENET_SECRET)
 
 ## Install
 
