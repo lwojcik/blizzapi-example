@@ -9,9 +9,7 @@ os:
   - osx
   - windows
 
-matrix:
-  allow_failures:
-    - os: windows
+dist: bionic
 
 node_js:
   - '10'
