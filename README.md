@@ -2,7 +2,7 @@
 
 # blizzapi-example
 
-[![Travis CI Build Status](https://travis-ci.org/lukemnet/blizzapi-example.svg?branch=master)](https://travis-ci.org/lukemnet/blizzapi-example)
+[![Travis CI Build Status](https://travis-ci.com/lukemnet/blizzapi-example.svg?branch=master)](https://travis-ci.com/lukemnet/blizzapi-example)
 [![Maintainability](https://api.codeclimate.com/v1/badges/088ec8ed788ec238a671/maintainability)](https://codeclimate.com/github/lukemnet/blizzapi-example/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/088ec8ed788ec238a671/test_coverage)](https://codeclimate.com/github/lukemnet/blizzapi-example/test_coverage)
 
