@@ -2,10 +2,8 @@
 
 # blizzapi-example
 
-[![Travis CI Build Status](https://travis-ci.com/lukemnet/blizzapi-example.svg?branch=master)](https://travis-ci.com/lukemnet/blizzapi-example)
-[![Maintainability](https://api.codeclimate.com/v1/badges/088ec8ed788ec238a671/maintainability)](https://codeclimate.com/github/lukemnet/blizzapi-example/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/088ec8ed788ec238a671/test_coverage)](https://codeclimate.com/github/lukemnet/blizzapi-example/test_coverage)
-
+[![Build status](https://ci.appveyor.com/api/projects/status/730bosd63tajuppb?svg=true)](https://ci.appveyor.com/project/lwojcik/blizzapi-example)
+[![codecov](https://codecov.io/gh/lukemnet/blizzapi-example/branch/master/graph/badge.svg?token=loNV2s0Yb2)](https://codecov.io/gh/lukemnet/blizzapi-example)
 
 Sample REST API based on Express.js demonstrating [BlizzAPI](https://github.com/lukemnet/blizzapi) features.
 
