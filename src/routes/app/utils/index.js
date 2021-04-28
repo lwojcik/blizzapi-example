@@ -104,5 +104,4 @@ router.get('/getDefaultLocaleNameForRegionId/:regionId', (req, res) => {
   res.json(BlizzAPI.getDefaultLocaleNameForRegionId(regionId));
 });
 
-
 module.exports = router;
