@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const BlizzAPI = require('blizzapi');
+const { BlizzAPI } = require('blizzapi');
 
 /** Regions */
 
