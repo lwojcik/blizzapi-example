@@ -1,8 +1,8 @@
 const request = require('supertest');
 const app = require('../../../src/app');
 
-jest.mock('blizzapi', () => jest.fn().mockImplementation(
-  () => ({
+jest.mock('blizzapi', () => ({
+  BlizzAPI: jest.fn().mockImplementation(() => ({
     query: (endpoint) => {
       if (endpoint === 'wrongEndpoint') {
         throw new Error('wrong response');
@@ -10,9 +10,9 @@ jest.mock('blizzapi', () => jest.fn().mockImplementation(
       return Promise.resolve({
         data: `sample data for ${endpoint}`,
       });
-    },
-  }),
-));
+    }
+  })),
+}));
 
 describe('/query/:region/?endpoint=:endpoint', () => {
   const route = `/api/query/us?endpoint=/sample/endpoint`;

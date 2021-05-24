@@ -1,15 +1,15 @@
+const { BlizzAPI } = require('blizzapi');
 const request = require('supertest');
 const app = require('../../../src/app');
 
-jest.mock('blizzapi', () => jest.fn().mockImplementation(
-  () => ({
+jest.mock('blizzapi', () => ({
+  BlizzAPI: jest.fn().mockImplementation(() => ({
     getAccessToken: () => Promise.resolve('sample access token'),
-  }),
-));
+  })),
+}));
 
 describe('/getAccessToken/:region', () => {
   const route = '/api/getAccessToken/us';
-  const wrongRoute = '/api/getAccessToken/wrong';
 
   test('should return 200', async () => {
     const response = await request(app).get(route);

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const BlizzAPI = require('blizzapi');
+const { BlizzAPI } = require('blizzapi');
 
 const { env } = process;
 
@@ -13,6 +13,7 @@ router.get('/query/:region', async (req, res) => {
     const response = await BnetApi.query(endpoint);
     res.json(response);
   } catch (error) {
+    console.log(error);
     res.status(400).send({
       error: 'Failed to receive Battle.net API data',
     });
