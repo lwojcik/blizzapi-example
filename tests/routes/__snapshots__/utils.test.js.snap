@@ -31,14 +31,14 @@ exports[`/utils/checkIfSc2RealmLooksValid/1 should match snapshot 1`] = `true`;
 exports[`/utils/checkIfSc2RealmLooksValid/2 should match snapshot 1`] = `true`;
 
 exports[`/utils/getAllAvailableSc2Realms should match snapshot 1`] = `
-Array [
+[
   1,
   2,
 ]
 `;
 
 exports[`/utils/getAllDefaultLocaleNames should match snapshot 1`] = `
-Object {
+{
   "1": "en_US",
   "2": "en_GB",
   "3": "ko_KR",
@@ -47,7 +47,7 @@ Object {
 `;
 
 exports[`/utils/getAllLocaleNames should match snapshot 1`] = `
-Array [
+[
   "en_US",
   "es_MX",
   "pt_BR",
@@ -65,13 +65,13 @@ Array [
 `;
 
 exports[`/utils/getAllLocales should match snapshot 1`] = `
-Object {
-  "1": Array [
+{
+  "1": [
     "en_US",
     "es_MX",
     "pt_BR",
   ],
-  "2": Array [
+  "2": [
     "en_GB",
     "es_ES",
     "fr_FR",
@@ -80,18 +80,18 @@ Object {
     "pt_PT",
     "it_IT",
   ],
-  "3": Array [
+  "3": [
     "ko_KR",
     "zh_TW",
   ],
-  "5": Array [
+  "5": [
     "zh_CN",
   ],
 }
 `;
 
 exports[`/utils/getAllRegionIds should match snapshot 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -100,7 +100,7 @@ Array [
 `;
 
 exports[`/utils/getAllRegionNames should match snapshot 1`] = `
-Array [
+[
   "us",
   "eu",
   "kr",
@@ -110,38 +110,38 @@ Array [
 `;
 
 exports[`/utils/getAllRegions should match snapshot 1`] = `
-Object {
-  "1": Array [
+{
+  "1": [
     "us",
   ],
-  "2": Array [
+  "2": [
     "eu",
   ],
-  "3": Array [
+  "3": [
     "kr",
     "tw",
   ],
-  "5": Array [
+  "5": [
     "cn",
   ],
 }
 `;
 
 exports[`/utils/getAllSc2Realms should match snapshot 1`] = `
-Object {
-  "1": Array [
+{
+  "1": [
     1,
     2,
   ],
-  "2": Array [
+  "2": [
     1,
     2,
   ],
-  "3": Array [
+  "3": [
     1,
     2,
   ],
-  "5": Array [
+  "5": [
     1,
   ],
 }
@@ -156,7 +156,7 @@ exports[`/utils/getDefaultLocaleNameForRegionId/3 should match snapshot 1`] = `"
 exports[`/utils/getDefaultLocaleNameForRegionId/5 should match snapshot 1`] = `"zh_CN"`;
 
 exports[`/utils/getLocalesByRegionId/1 should match snapshot 1`] = `
-Array [
+[
   "en_US",
   "es_MX",
   "pt_BR",
@@ -164,7 +164,7 @@ Array [
 `;
 
 exports[`/utils/getLocalesByRegionId/2 should match snapshot 1`] = `
-Array [
+[
   "en_GB",
   "es_ES",
   "fr_FR",
@@ -176,14 +176,14 @@ Array [
 `;
 
 exports[`/utils/getLocalesByRegionId/3 should match snapshot 1`] = `
-Array [
+[
   "ko_KR",
   "zh_TW",
 ]
 `;
 
 exports[`/utils/getLocalesByRegionId/5 should match snapshot 1`] = `
-Array [
+[
   "zh_CN",
 ]
 `;
@@ -199,53 +199,53 @@ exports[`/utils/getRegionIdByName/tw should match snapshot 1`] = `3`;
 exports[`/utils/getRegionIdByName/us should match snapshot 1`] = `1`;
 
 exports[`/utils/getRegionNameById/1 should match snapshot 1`] = `
-Array [
+[
   "us",
 ]
 `;
 
 exports[`/utils/getRegionNameById/2 should match snapshot 1`] = `
-Array [
+[
   "eu",
 ]
 `;
 
 exports[`/utils/getRegionNameById/3 should match snapshot 1`] = `
-Array [
+[
   "kr",
   "tw",
 ]
 `;
 
 exports[`/utils/getRegionNameById/5 should match snapshot 1`] = `
-Array [
+[
   "cn",
 ]
 `;
 
 exports[`/utils/getSc2RealmsByRegionId/1 should match snapshot 1`] = `
-Array [
+[
   1,
   2,
 ]
 `;
 
 exports[`/utils/getSc2RealmsByRegionId/2 should match snapshot 1`] = `
-Array [
+[
   1,
   2,
 ]
 `;
 
 exports[`/utils/getSc2RealmsByRegionId/3 should match snapshot 1`] = `
-Array [
+[
   1,
   2,
 ]
 `;
 
 exports[`/utils/getSc2RealmsByRegionId/5 should match snapshot 1`] = `
-Array [
+[
   1,
 ]
 `;
