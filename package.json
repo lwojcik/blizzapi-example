@@ -15,7 +15,7 @@
   "dependencies": {
     "blizzapi": "^2.0.1",
     "dotenv": "16.0.3",
-    "express": "4.18.1"
+    "express": "4.18.2"
   },
   "devDependencies": {
     "jest": "29.1.2",
