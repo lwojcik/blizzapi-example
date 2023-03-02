@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "blizzapi": "^2.0.1",
+    "blizzapi": "^2.4.0",
     "dotenv": "16.0.3",
     "express": "4.18.2"
   },
