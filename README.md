@@ -1,9 +1,4 @@
-<img src="https://raw.githubusercontent.com/blizzapi/blizzapi-docs/master/docs/.vuepress/public/logo.png" alt="BlizzAPI logo" width="200" height="200">
-
 # blizzapi-example
-
-[![Build status](https://ci.appveyor.com/api/projects/status/730bosd63tajuppb?svg=true)](https://ci.appveyor.com/project/lwojcik/blizzapi-example)
-[![codecov](https://codecov.io/gh/blizzapi/blizzapi-example/branch/master/graph/badge.svg?token=loNV2s0Yb2)](https://codecov.io/gh/blizzapi/blizzapi-example)
 
 Sample REST API based on Express.js demonstrating [BlizzAPI](https://github.com/blizzapi/blizzapi) features.
 
@@ -87,7 +82,7 @@ For a complete list of method names see [BlizzAPI utility methods](https://blizz
 
 ## License
 
-Licensed under MIT License. See [LICENSE](https://github.com/blizzapi/blizzapi-example/blob/master/LICENSE) for more information.
+Licensed under MIT License.
 
 ## Legal
 
