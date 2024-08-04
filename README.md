@@ -76,8 +76,6 @@ http://localhost:8085/utils/validateRegionName/eu
 http://localhost:8085/utils/isLocaleValidForRegionId/en_US/1
 ```
 
-For a complete list of method names see [BlizzAPI utility methods](https://blizzapi.lukem.net/docs/utils/). 
-
 ## License
 
 Licensed under MIT License.
